@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "VectorProtocol",
+        "repositoryURL": "https://github.com/robertmsale/VectorProtocol.git",
+        "state": {
+          "branch": null,
+          "revision": "d23d15eb20b48418280ec6b02ce1da6cfa409d09",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
