@@ -5,7 +5,7 @@ import CoreGraphics
 import VectorProtocol
 
 public struct Spherical {
-    #if canImport(CoreGraphics)
+    #if os(macOS) && canImport(CoreGraphics)
     public typealias BFP = CGFloat
     #else
     public typealias BFP = Float

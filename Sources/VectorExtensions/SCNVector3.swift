@@ -58,6 +58,13 @@ extension SCNVector3: Vector {
     public mutating func set(axis: SCNVector3, angle: BFP) { set(quat: SCNQuaternion(axis: axis, angle: angle)) }
     /// Set Vector from Euler rotation
     public mutating func set(euler e: Euler) { set(quat: SCNQuaternion(euler: e)) }
+    /// Set Vector from Spherical
+    public mutating func set(spherical s: Spherical) {
+        let sinPhiRadius = sin(s.phi) * s.radius
+        x = sinPhiRadius * sin(s.theta)
+        y = cos(s.phi) * s.radius
+        z = sinPhiRadius * cos(s.theta)
+    }
     
     /// Calculate linear interpolation between this vector and another
     public mutating func lerp(_ v: Self, alpha: BFP) {
