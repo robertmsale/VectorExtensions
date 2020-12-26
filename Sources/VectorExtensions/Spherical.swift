@@ -3,6 +3,7 @@ import Foundation
 import CoreGraphics
 #endif
 import VectorProtocol
+import SceneKit
 
 public struct Spherical {
     #if os(macOS) && canImport(CoreGraphics)
@@ -24,6 +25,19 @@ public struct Spherical {
         phi = p
         theta = t
     }
+    
+    public init(from: SCNVector3) {
+        let length = from.length
+        radius = length
+        if ( length == 0 ) {
+            theta = 0
+            phi = 0
+        } else {
+            theta = atan2(from.x, from.z)
+            phi = acos((from.y / length).clamp(min: -1, max: 1))
+        }
+    }
+    
     public init() {
         self.init(radius: 0, phi: 0, theta: 0)
     }
