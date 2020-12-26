@@ -32,4 +32,8 @@ public struct Euler: Vector {
     public enum Order { case XYZ, YXZ, ZXY, ZYX, YZX, XZY }
     /// The order of which a rotation will be applied to some geometry
     public var order: Order
+    
+    public init(x a: BFP, y b: BFP, z c: BFP, order o: Order) {
+        x = a; y = b; z = c; order = o
+    }
 }
