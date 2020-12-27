@@ -141,10 +141,10 @@ extension SCNQuaternion: Vector {
         self.init(x, y, z, w)
     }
 
-    /// Initialize Quaternion from the rotation required to rotate from vector *from* to vector *to*
+    /// Initialize Quaternion from the rotation required to rotate from vector *from* to vector *to* (Unit Vectors)
     public init(from: SCNVector3, to: SCNVector3) {
         let EPS: BFP = 0.000001
-        var v = SCNQuaternion()
+        var v = SCNQuaternion(0, 0, 0, 1)
 
         var r = from.dotProduct(to) + 1
 
