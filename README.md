@@ -1,5 +1,8 @@
 # VectorExtensions
 
+# Archive Notice
+This repository is now archived. The algorithms in this Swift package are not performant and it is recommended that you use [SIMDExtensions](https://github.com/robertmsale/SIMDExtensions) if you are looking for an explicitly typed way of doing vector arithmetic. SIMD is made easy with Apple's framework, and SIMDExtensions is an API that cuts down on the effort of reading through code documentation to figure out what c-style SIMD function will work with what SIMD types. It also includes utilities similar to the ones present in this project. This repository will remain here for educational purposes because it showcases the power of the protocol-oriented nature of Swift. This package is no longer used in FieldFab for iOS.
+
 This Swift package enhances the functionality of the built in Vector data types for SceneKit and Core Graphics, making it much easier to work with procedurally generated 2D and 3D content. This package is also one of the many core components powering [FieldFab](https://fieldfab.net) for iOS.
 
 If you do not want to extend the built in data types, but would like to roll your own Vector data types, see the [VectorProtocol](https://github.com/robertmsale/VectorProtocol) page. VectorExtensions depends upon VectorProtocol.
